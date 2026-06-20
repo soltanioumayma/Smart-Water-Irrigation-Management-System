@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/values/strings.xml
+    Toutes les chaînes de l'application
+-->
+<resources>
+    <string name="app_name">Piscine paradis</string>
+
+    <!-- Top Bar -->
+    <string name="camera">Ouvrir la caméra</string>
+    <string name="ext_temp">Température extérieure</string>
+    <string name="pool_temp">Température piscine</string>
+
+    <!-- Traitements -->
+    <plurals name="treatments_title">
+        <item quantity="one">%d traitement conseillé</item>
+        <item quantity="other">%d traitements conseillés</item>
+    </plurals>
+    <string name="treatments_desc">Pour garder votre eau saine, nous vous conseillons de réaliser les traitements proposés.</string>
+    <string name="treatments">Traitements conseillés</string>
+
+    <!-- Eco -->
+    <string name="eco_proximity">Eco est à proximité</string>
+    <string name="eco_next_eval">Prochaine évaluation de l\'eau dans %d minutes</string>
+
+    <!-- Météo -->
+    <string name="weather_icon">Icône météo</string>
+
+    <!-- Analyse -->
+    <string name="last_analysis">Dernière analyse : Aujourd\'hui à %s</string>
+
+    <!-- Bottom Nav -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_pool">Ma piscine</string>
+    <string name="nav_shop">Boutique</string>
+    <string name="nav_more">Plus</string>
+    <string name="nav_assistant">Assistant</string>
+    <string name="action_settings">Parametres</string>
+    <string name="first_fragment_label">Premier ecran</string>
+    <string name="second_fragment_label">Deuxieme ecran</string>
+
+    <!-- Alertes -->
+    <string name="alert_ph_acide_title">⚠️ pH trop acide</string>
+    <string name="alert_ph_basique_title">⚠️ pH trop basique</string>
+    <string name="alert_temp_haute_title">🔥 Eau trop chaude</string>
+    <string name="alert_temp_basse_title">❄️ Eau trop froide</string>
+    <string name="alert_cond_basse_title">ℹ️ Conductivité trop faible</string>
+    <string name="alert_cond_haute_title">⚠️ Conductivité trop élevée</string>
+
+    <!-- Pompe -->
+    <string name="btn_stop_pump">Arrêt pompe</string>
+    <string name="pump_already_stopped">La pompe est déjà arrêtée.</string>
+    <string name="pump_summary_title">Résumé d\'irrigation</string>
+    <string name="pump_summary_subtitle">Session terminée — voici l\'eau distribuée</string>
+    <string name="pump_summary_close">Fermer</string>
+
+    <!-- Écran d'accueil Aqua Smart (piscine / irrigation) -->
+    <string name="aquasmart_brand">Aqua Smart</string>
+    <string name="aquasmart_title">Contrôlez votre qualité d\'eau avec Aqua Smart</string>
+    <string name="aquasmart_subtitle">Irrigation intelligente, capteurs en direct et décisions claires pour votre exploitation.</string>
+    <string name="aquasmart_hint">Visualisez le débit, le volume et la qualité en un coup d\'œil — comme un tableau de bord pro.</string>
+    <string name="aquasmart_cta">Bienvenue</string>
+
+    <!-- Assistant fermier (chat) -->
+    <string name="assistant_title">Assistant Aqua Smart</string>
+    <string name="assistant_subtitle">Posez vos questions sur l\'irrigation, la pompe et la qualité de l\'eau.</string>
+    <string name="assistant_input_hint">Votre question…</string>
+    <string name="assistant_send">Envoyer</string>
+    <string name="assistant_welcome_bot">Bonjour, comment je peux vous aider ?</string>
+    <string name="assistant_gemini_missing_key">Clé Gemini absente. Ajoutez dans le fichier local.properties (à la racine du projet) la ligne :\nGEMINI_API_KEY=votre_clé\npuis reconstruisez l\'application (Build → Rebuild).</string>
+    <string name="assistant_gemini_error">Erreur Gemini : %1$s</string>
+    <string name="assistant_gemini_empty_reply">Je n\'ai pas reçu de texte de la part du modèle. Réessayez avec une autre formulation.</string>
+    <string name="assistant_fallback_prefix">Réponse locale (secours) :\n</string>
+
+    <!-- Écran d'accueil AquaVerde (plantes) -->
+    <string name="welcome_brand">AquaVerde</string>
+    <string name="welcome_title">Hydratez vos\namis verts 🌿</string>
+    <string name="welcome_subtitle">Rappels d\'arrosage intelligents\npowered by AI — ne perdez plus jamais une plante.</string>
+    <string name="welcome_hint">Plannings intelligents basés sur l\'espèce, le climat et la taille du pot.</string>
+    <string name="welcome_cta">Commencer 🌿</string>
+    <string name="welcome_cta_sub">Gratuit · Sans compte requis</string>
+
+    <!-- Stats AquaVerde -->
+    <string name="stat_plants_count">12k+</string>
+    <string name="stat_plants_label">Plantes sauvées</string>
+    <string name="stat_growth_count">98%</string>
+    <string name="stat_growth_label">Taux de croissance</string>
+    <string name="stat_rating_count">4.9★</string>
+    <string name="stat_rating_label">Note utilisateurs</string>
+
+</resources>

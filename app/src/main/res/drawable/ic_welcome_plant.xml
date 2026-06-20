@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="220dp"
+    android:viewportWidth="200"
+    android:viewportHeight="220">
+    <!-- Pot -->
+    <path
+        android:fillColor="#1A6EBE"
+        android:pathData="M55,175 L145,175 L138,210 L62,210 Z" />
+    <path
+        android:fillColor="#0C4477"
+        android:pathData="M52,170 L148,170 L148,178 L52,178 Z" />
+    <!-- Stem -->
+    <path
+        android:fillColor="#2D5A3D"
+        android:pathData="M96,170 L104,170 L102,95 L98,95 Z" />
+    <!-- Leaves -->
+    <path
+        android:fillColor="#00C48C"
+        android:pathData="M100,100 Q130,85 140,115 Q125,125 100,108 Z" />
+    <path
+        android:fillColor="#4ECDC4"
+        android:pathData="M98,120 Q60,100 48,135 Q70,145 98,125 Z" />
+    <path
+        android:fillColor="#00A878"
+        android:pathData="M102,75 Q135,55 155,90 Q130,100 102,82 Z" />
+    <path
+        android:fillColor="#4ECDC4"
+        android:pathData="M100,140 Q65,130 55,165 Q78,168 100,148 Z" />
+    <!-- Water sparkle -->
+    <path
+        android:fillColor="#80FFFFFF"
+        android:pathData="M118,60 L122,68 L130,70 L122,72 L118,80 L114,72 L106,70 L114,68 Z" />
+</vector>

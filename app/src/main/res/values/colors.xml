@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── App backgrounds ── -->
+    <color name="bg_dark_deep">#060E18</color>
+    <color name="bg_dark_card">#081424</color>
+    <color name="bg_dark_widget">#0A1930</color>
+    <color name="background_light">#F5F8FB</color>
+    <color name="divider">#E8ECEF</color>
+
+    <!-- ── Welcome screen backgrounds ── -->
+    <color name="welcome_bg_deep">#0A1628</color>
+    <color name="welcome_bg_mid">#0D1F3C</color>
+    <color name="welcome_bg_dark">#081422</color>
+
+    <!-- ── Hero card ── -->
+    <color name="card_hero_bg">#121B2E</color>
+    <color name="card_hero_bg_alt">#0E1928</color>
+
+    <!-- ── Brand ── -->
+    <color name="brand_blue">#1A6EBE</color>
+    <color name="brand_blue_dark">#0C4477</color>
+    <color name="brand_teal">#4ECDC4</color>
+    <color name="brand_teal_dark">#45B7D1</color>
+    <color name="brand_green_light">#96E6A1</color>
+    <color name="bleu_fauchiat">#00E5FF</color>
+
+    <!-- ── Status ── -->
+    <color name="status_ok">#00C48C</color>
+    <color name="status_warn">#F5A623</color>
+    <color name="status_danger">#FF4A6A</color>
+
+    <!-- ── Button backgrounds ── -->
+    <color name="btn_stop_bg">#1A0A10</color>
+    <color name="btn_start_bg">#0A1A14</color>
+    <color name="bg_button_round">#F0F0F0</color>
+
+    <!-- ── Weather ── -->
+    <color name="weather_sun">#F5A623</color>
+    <color name="weather_cloud">#90B4CE</color>
+
+    <!-- ── Text ── -->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_dark">#1A2332</color>
+    <color name="text_hint">#5B8DB8</color>
+    <color name="text_hint_light">#90B4CE</color>
+    <color name="text_hint_aqua">#BFB4D2DC</color>
+    <color name="text_hint_muted">#8CB4D2DC</color>
+    <color name="text_dim">#3D5A7A</color>
+    <color name="text_light">#7A8FA0</color>
+    <color name="cta_text_dark">#071422</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha_70">#B3FFFFFF</color>
+
+    <!-- ── Navigation ── -->
+    <color name="nav_active">#4ECDC4</color>
+    <color name="nav_inactive">#5B8DB8</color>
+
+    <!-- ── Alert sections ── -->
+    <color name="bg_section_light">#E8F4F8</color>
+    <color name="bg_section_warning">#FFF3E0</color>
+    <color name="bg_section_success">#E8F5E9</color>
+    <color name="bg_alert_card">#FFFFFF</color>
+
+    <!-- ── Badges ── -->
+    <color name="bg_badge_red">#FFEBEE</color>
+    <color name="bg_badge_orange">#FFF3E0</color>
+    <color name="ic_badge_green">#E8F5E9</color>
+    <color name="bg_badge_parameter">#1A6EBE</color>
+
+    <!-- ── Header gradient ── -->
+    <color name="header_gradient_start">#1A6EBE</color>
+    <color name="header_gradient_end">#4ECDC4</color>
+
+    <!-- ── Strokes ── -->
+    <color name="stroke_teal_20">#334ECDC4</color>
+    <color name="stroke_teal_30">#4D4ECDC4</color>
+    <color name="stroke_teal_35">#594ECDC4</color>
+
+    <!-- ── Brand badge ── -->
+    <color name="badge_teal_bg">#1A4ECDC4</color>
+
+    <!-- ── Stats cards ── -->
+    <color name="stat_card_teal_bg">#1F4ECDC4</color>
+    <color name="stat_stroke_teal">#334ECDC4</color>
+    <color name="stat_card_green_bg">#1F96E6A1</color>
+    <color name="stat_stroke_green">#3396E6A1</color>
+    <color name="stat_green">#96E6A1</color>
+    <color name="stat_card_amber_bg">#1FFFB464</color>
+    <color name="stat_stroke_amber">#33FFB464</color>
+    <color name="stat_amber">#FFB464</color>
+
+    <!-- ── Hint card ── -->
+    <color name="hint_card_bg">#99101828</color>
+
+    <!-- ── Glow orbs ── -->
+    <color name="glow_teal">#0F4ECDC4</color>
+    <color name="glow_green">#0D96E6A1</color>
+    <color name="glow_blue">#0F45B7D1</color>
+
+    <!-- ── Particles ── -->
+    <color name="particle_teal">#804ECDC4</color>
+    <color name="particle_green">#9996E6A1</color>
+    <color name="particle_amber">#80FFB464</color>
+
+    <!-- ── Ripple ring ── -->
+    <color name="ripple_ring_teal">#664ECDC4</color>
+
+</resources>

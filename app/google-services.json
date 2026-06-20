@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "289306517609",
+    "project_id": "smartwater-53b6b",
+    "storage_bucket": "smartwater-53b6b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289306517609:android:c2ca24b97a279e39d842f8",
+        "android_client_info": {
+          "package_name": "com.example.smart_water_projet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdUZsaHeov2VNDcxt9Wd27Z9kYI294cYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

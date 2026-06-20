@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome_deep_navy">
+
+    <!-- ─── Glowing orbs background ─── -->
+    <View
+        android:id="@+id/glowOrbTopLeft"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="-60dp"
+        android:layout_marginTop="-60dp"
+        android:background="@drawable/bg_glow_orb_teal"
+        android:alpha="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/glowOrbRight"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="-50dp"
+        android:background="@drawable/bg_glow_orb_green"
+        android:alpha="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/plantHeroCard" />
+
+    <View
+        android:id="@+id/glowOrbBottomLeft"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="-30dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/bg_glow_orb_blue"
+        android:alpha="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- ─── Particle dots (animated via code) ─── -->
+    <View android:id="@+id/particle1"
+        android:layout_width="4dp" android:layout_height="4dp"
+        android:background="@drawable/bg_particle_teal"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.12" app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View android:id="@+id/particle2"
+        android:layout_width="3dp" android:layout_height="3dp"
+        android:background="@drawable/bg_particle_teal"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.82" app:layout_constraintVertical_bias="0.22"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View android:id="@+id/particle3"
+        android:layout_width="5dp" android:layout_height="5dp"
+        android:background="@drawable/bg_particle_amber"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.08" app:layout_constraintVertical_bias="0.38"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View android:id="@+id/particle4"
+        android:layout_width="3dp" android:layout_height="3dp"
+        android:background="@drawable/bg_particle_teal"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.90" app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View android:id="@+id/particle5"
+        android:layout_width="4dp" android:layout_height="4dp"
+        android:background="@drawable/bg_particle_teal"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.15" app:layout_constraintVertical_bias="0.70"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- ─── Rotating halo behind hero card ─── -->
+    <View
+        android:id="@+id/haloRingOuter"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
+        android:background="@drawable/bg_halo_ring_dashed"
+        android:alpha="0.5"
+        app:layout_constraintTop_toTopOf="@id/plantHeroCard"
+        app:layout_constraintBottom_toBottomOf="@id/plantHeroCard"
+        app:layout_constraintStart_toStartOf="@id/plantHeroCard"
+        app:layout_constraintEnd_toEndOf="@id/plantHeroCard" />
+
+    <View
+        android:id="@+id/haloRingInner"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:background="@drawable/bg_halo_ring_solid"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="@id/plantHeroCard"
+        app:layout_constraintBottom_toBottomOf="@id/plantHeroCard"
+        app:layout_constraintStart_toStartOf="@id/plantHeroCard"
+        app:layout_constraintEnd_toEndOf="@id/plantHeroCard" />
+
+    <!-- ─── Hero plant card ─── -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/plantHeroCard"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="@color/card_hero_bg"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="28dp"
+        app:strokeColor="@color/stroke_teal_30"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Radial shine top -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_hero_card_shine" />
+
+            <!-- Plant image (animated float + sway in code) -->
+            <ImageView
+                android:id="@+id/ivWelcomePlant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="24dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_welcome_plant" />
+
+            <!-- Water drops overlay (custom view, animated in code) -->
+            <com.example.smart_water_projet.widget.WelcomeDropsOnPlantView
+                android:id="@+id/plantDropsOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- Ripple rings at bottom (animated in code) -->
+            <View
+                android:id="@+id/rippleRing1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_ripple_ring"
+                android:alpha="0" />
+
+            <View
+                android:id="@+id/rippleRing2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_ripple_ring"
+                android:alpha="0" />
+
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ─── Brand badge pill ─── -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/brandBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/badge_teal_bg"
+        app:cardCornerRadius="99dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/stroke_teal_35"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plantHeroCard">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <!-- Pulsing dot -->
+            <View
+                android:id="@+id/brandPulsingDot"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/bg_pulsing_dot" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.18"
+                android:text="@string/welcome_brand"
+                android:textAllCaps="true"
+                android:textColor="@color/brand_teal"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ─── Main title ─── -->
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/welcome_title"
+        android:textColor="@color/text_white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brandBadge" />
+
+    <!-- Gradient subtitle line (uses ShimmerTextView or standard) -->
+    <TextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/welcome_subtitle"
+        android:textColor="@color/bleu_fauchiat"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeTitle" />
+
+    <!-- ─── Stats row ─── -->
+    <LinearLayout
+        android:id="@+id/statsRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeSubtitle">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="5dp"
+            app:cardBackgroundColor="@color/stat_card_teal_bg"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stat_stroke_teal"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/stat_plants_count"
+                    android:textColor="@color/brand_teal"
+                    android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/stat_plants_label"
+                    android:textColor="@color/text_hint_muted"
+                    android:textSize="10sp" android:layout_marginTop="3dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:cardBackgroundColor="@color/stat_card_green_bg"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stat_stroke_green"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/stat_growth_count"
+                    android:textColor="@color/stat_green"
+                    android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/stat_growth_label"
+                    android:textColor="@color/text_hint_muted"
+                    android:textSize="10sp" android:layout_marginTop="3dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            app:cardBackgroundColor="@color/stat_card_amber_bg"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stat_stroke_amber"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:gravity="center"
+                android:paddingTop="12dp" android:paddingBottom="12dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/stat_rating_count"
+                    android:textColor="@color/stat_amber"
+                    android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/stat_rating_label"
+                    android:textColor="@color/text_hint_muted"
+                    android:textSize="10sp" android:layout_marginTop="3dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- ─── Hint card ─── -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardWelcomeHint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="@color/hint_card_bg"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/stroke_teal_20"
+        app:strokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statsRow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="🔔"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/welcome_hint"
+                android:textColor="@color/text_hint_aqua"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ─── CTA Button (gradient shimmer via LayerDrawable + ObjectAnimator) ─── -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBienvenue"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        android:elevation="12dp"
+        android:text="@string/welcome_cta"
+        android:textAllCaps="false"
+        android:textColor="@color/cta_text_dark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="29dp"
+        android:background="@drawable/bg_cta_button_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Sub-label under button -->
+    <TextView
+        android:id="@+id/tvCtaSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/welcome_cta_sub"
+        android:textColor="@color/text_hint_muted"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@id/btnBienvenue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

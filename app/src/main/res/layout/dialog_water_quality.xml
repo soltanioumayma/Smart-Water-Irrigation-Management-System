@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/bg_dark_card">
+
+    <!-- Icône status -->
+    <ImageView
+        android:id="@+id/ivDialogIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_check_circle"
+        app:tint="@color/status_ok"
+        android:contentDescription="@null"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✅ Eau conforme"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Message principal -->
+    <TextView
+        android:id="@+id/tvDialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tous les paramètres sont dans les normes."
+        android:textSize="14sp"
+        android:textColor="@color/text_hint_light"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Séparateur -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_header_gradient"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Détails des paramètres -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dark_widget_rounded"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Détails des paramètres"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/brand_teal"
+            android:layout_marginBottom="12dp" />
+
+        <!-- pH -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:id="@+id/indicatorPh"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_led_green"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="pH"
+                android:textSize="13sp"
+                android:textColor="@color/text_hint_light" />
+
+            <TextView
+                android:id="@+id/tvDialogPhValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvDialogPhNorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(6.5 – 8.4)"
+                android:textSize="11sp"
+                android:textColor="@color/text_dim" />
+        </LinearLayout>
+
+        <!-- Température -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:id="@+id/indicatorTemp"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_led_green"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Température"
+                android:textSize="13sp"
+                android:textColor="@color/text_hint_light" />
+
+            <TextView
+                android:id="@+id/tvDialogTempValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24.3°C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvDialogTempNorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(15 – 35°C)"
+                android:textSize="11sp"
+                android:textColor="@color/text_dim" />
+        </LinearLayout>
+
+        <!-- Conductivité -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/indicatorCond"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_led_green"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Conductivité"
+                android:textSize="13sp"
+                android:textColor="@color/text_hint_light" />
+
+            <TextView
+                android:id="@+id/tvDialogCondValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="420 µS/cm"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvDialogCondNorm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(200 – 1200)"
+                android:textSize="11sp"
+                android:textColor="@color/text_dim" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Boutons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogCancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Annuler"
+            android:textSize="14sp"
+            android:textColor="@color/text_hint"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogOk"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="OK — Ouvrir pompe"
+            android:textSize="14sp"
+            android:backgroundTint="@color/status_ok"
+            android:textColor="@color/text_white"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

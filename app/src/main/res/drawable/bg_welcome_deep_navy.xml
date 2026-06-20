@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable/bg_welcome_deep_navy.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="145"
+        android:startColor="#0A1628"
+        android:centerColor="#0D1F3C"
+        android:endColor="#081422"
+        android:type="linear" />
+</shape>

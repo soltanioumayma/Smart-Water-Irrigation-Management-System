@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable/bg_cta_button_gradient.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#3ABDB5"
+                android:centerColor="#38A3BC"
+                android:endColor="#7BCFA5"
+                android:type="linear" />
+            <corners android:radius="29dp" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#4ECDC4"
+                android:centerColor="#45B7D1"
+                android:endColor="#96E6A1"
+                android:type="linear" />
+            <corners android:radius="29dp" />
+        </shape>
+    </item>
+
+</selector>

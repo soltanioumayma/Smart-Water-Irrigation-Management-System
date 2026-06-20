@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/bg_dark_card">
+
+    <!-- Titre -->
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ pH trop acide"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_header_gradient"
+        android:layout_marginVertical="16dp" />
+
+    <!-- Valeur actuelle vs Seuil -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valeur Actuelle"
+                android:textSize="12sp"
+                android:textColor="@color/text_hint" />
+
+            <TextView
+                android:id="@+id/tvDetailValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.2"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/status_danger"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:background="@color/text_dim"
+            android:layout_marginHorizontal="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seuil Idéal"
+                android:textSize="12sp"
+                android:textColor="@color/text_hint" />
+
+            <TextView
+                android:id="@+id/tvDetailThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6.5"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/status_ok"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Section Explication Scientifique -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_section_light"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explication Scientifique"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/bleu_fauchiat" />
+
+        <TextView
+            android:id="@+id/tvDetailExplanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Un pH inférieur à 6.5 rend l'eau trop acide..."
+            android:textSize="13sp"
+            android:textColor="@color/brand_blue"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp" />
+
+    </LinearLayout>
+
+    <!-- Section Impact sur Plantes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_section_warning"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Impact sur vos Plantes"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/status_danger" />
+
+        <TextView
+            android:id="@+id/tvDetailImpact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="L'eau acide peut endommager les racines..."
+            android:textSize="13sp"
+            android:textColor="@color/brand_blue"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp" />
+
+    </LinearLayout>
+
+    <!-- Section Solutions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_section_success"
+        android:padding="14dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solutions Recommandées"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/status_ok" />
+
+        <TextView
+            android:id="@+id/tvDetailSolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter du calcaire (CaCO₃)..."
+            android:textSize="13sp"
+            android:textColor="@color/brand_blue"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDismissAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Fermer"
+            android:textSize="14sp"
+            android:backgroundTint="@color/brand_blue"
+            android:textColor="@color/text_white"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/brand_teal"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
