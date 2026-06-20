@@ -19,7 +19,6 @@
 
 - [About The Project](#-about-the-project)
 - [Features](#-features)
-- [Screenshots](#-screenshots)
 - [Prerequisites](#-prerequisites)
 - [Installation](#-installation)
 - [Configuration](#-configuration)
